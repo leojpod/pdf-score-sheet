@@ -1,6 +1,7 @@
 package com.leojpod.demo.pdfscoresheet;
 
 import java.awt.Color;
+import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.MalformedURLException;
@@ -34,8 +35,12 @@ public class PDFScoreSheetServlet extends HttpServlet {
 	public PDF generatePDF(ScoreSheetData data) throws MalformedURLException, IOException {
 		data.updateScore();
 		PDFReader reader = new PDFReader();
-		reader.setSource(new URL("http://localhost:8080/pdfscoresheet/Template.pdf"));
+//		URL fileURL = new URL("file://Template.pdf");
+		File fileURL = new File("./Template.pdf");
+		System.out.println(fileURL);
+		reader.setSource(fileURL);
 		reader.load();
+		System.out.println("reader load worked!");
 		PDF pdf = new PDF(reader);
 		PDFPage roasterPage = pdf.getPage(0), eventPage = pdf.getPage(1);
 		PDFStyle titleStyle = new PDFStyle();
