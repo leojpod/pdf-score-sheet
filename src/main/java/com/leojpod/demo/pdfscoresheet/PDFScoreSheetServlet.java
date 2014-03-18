@@ -193,9 +193,17 @@ public class PDFScoreSheetServlet extends HttpServlet {
 				if (team.equals("home")) {
 					scorer = home.getPlayerByNumber(info.get("scorer").getAsInt());
 					if (info.has("firstAssist")) {
-						firstAssist = home.getPlayerByNumber(info.get("firstAssist").getAsInt());
-						if (info.has("secondAssist")) {
-							secondAssist = home.getPlayerByNumber(info.get("secondAssist").getAsInt());
+						try {
+							firstAssist = home.getPlayerByNumber(info.get("firstAssist").getAsInt());
+							if (info.has("secondAssist")) {
+								try {
+									secondAssist = home.getPlayerByNumber(info.get("secondAssist").getAsInt());
+								} catch(NumberFormatException e){
+									secondAssist = null;
+								}
+							}
+						} catch(NumberFormatException e){
+							firstAssist = null;
 						}
 					} 
 				} else { 
