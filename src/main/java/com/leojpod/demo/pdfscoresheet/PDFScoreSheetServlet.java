@@ -215,7 +215,7 @@ public class PDFScoreSheetServlet extends HttpServlet {
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		resp.setContentType("application/force-download");
+//		resp.setContentType("application/force-download");
 		resp.setHeader("Content-Disposition", "attachment");
 		OutputStream ostream = resp.getOutputStream();
 		PDF pdf = generatePDF(extractDataFromRequest(req));
