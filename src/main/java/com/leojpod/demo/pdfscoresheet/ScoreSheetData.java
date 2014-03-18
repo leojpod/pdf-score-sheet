@@ -93,7 +93,7 @@ public class ScoreSheetData {
 		
 		public Team(String name){
 			this.name = name;
-			this.roaster = new TreeSet<>();
+			this.roaster = new TreeSet<Player>();
 		}
 		public Player getPlayerByNumber(int number) {
 			for (Player ply: roaster) {
@@ -114,7 +114,7 @@ public class ScoreSheetData {
 	
 	public ScoreSheetData(Team home, Team visitor) {
 		homeTeam = home; visitorTeam = visitor;
-		events = new LinkedList<>();
+		events = new LinkedList<GameEvent>();
 	}
 	
 	public void updateScore() {
