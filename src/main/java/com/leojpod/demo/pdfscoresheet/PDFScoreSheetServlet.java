@@ -224,6 +224,7 @@ public class PDFScoreSheetServlet extends HttpServlet {
 		resp.setHeader("Content-Disposition", "attachment");
 		OutputStream ostream = resp.getOutputStream();
 		PDF pdf = generatePDF(extractDataFromRequest(req));
+		System.out.println("pdf generated");
 		pdf.render(ostream);
 		
 	}
