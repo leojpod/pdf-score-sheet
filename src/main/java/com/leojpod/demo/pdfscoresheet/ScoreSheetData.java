@@ -40,7 +40,7 @@ public class ScoreSheetData {
 			}
 			@Override
 			public int compareTo(Time o) {
-				return this.toSeconds() - o.toSeconds();
+				return o.toSeconds() - this.toSeconds();
 			}
 			public int toSeconds() {
 				return minutes * 60 + seconds;
