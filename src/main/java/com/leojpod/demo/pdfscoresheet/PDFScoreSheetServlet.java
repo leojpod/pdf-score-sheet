@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -108,7 +109,9 @@ public class PDFScoreSheetServlet extends HttpServlet {
 		int period = 0;
 		y = roasterPage.getHeight() - 1.68f * 72
 				+ roasterStyle.getTextLineSpacing() - ySkip;
-		for (GameEvent evt : data.events) {
+		GameEvent[] events = data.events.toArray(new GameEvent[0]);
+		Arrays.sort(events);
+		for (GameEvent evt : events) {
 			if (evt.time.period > period) {
 				// indicate the period
 				period = evt.time.period;
