@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Pdf-score-sheet : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pdf-score-sheet</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/leojpod/pdf-score-sheet">View on GitHub</a>
+
+          <h1 id="project_title">Pdf-score-sheet</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/leojpod/pdf-score-sheet/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/leojpod/pdf-score-sheet/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="pdf-score-sheet-generator-for-hockey-games" class="anchor" href="#pdf-score-sheet-generator-for-hockey-games"><span class="octicon octicon-link"></span></a>PDF score sheet generator for hockey games</h3>
+
+<p>A couple of years back, I spent quite some time behind the board of a hockey field (that is when I wasn't on it myself). What I remember from that period is how freezing I was and how complicated it was to fill up the game sheet, to enter correctly the name of all the players (without spell mistakes) and how cold where my fingers when I had to write down every goal or penalty for all these hockey games. At the end of every game I would swear “why isn’t there a software to do that? I could type with gloves and at least I would not need to start over if I make a mistake!” Well it is now thing done!</p>
+
+<p>The small web application whose code is freely accessible <a href="github.com/leojpod/pdf-score-sheet/">here</a> and can be seen working live <a href="http://pdf-score-sheet.herokuapp.com/">here</a> handle this particular task. No ninja coding required for that. A simple jquery mobile interface handle the input submission and a single HttpServlet receive them in json format, parse them and feed them to the pdf generator. The BFO pdf library make it easy to use a base pdf and to draw text wherever needed to fill up the gap! 
+Happy coding!</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Pdf-score-sheet maintained by <a href="https://github.com/leojpod">leojpod</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
